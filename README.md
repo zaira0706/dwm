@@ -4,15 +4,15 @@ dwm 是一个非常快速, 小巧并使用动态管理窗口的窗口管理器
 dwm的官网:<a href="http://suckless.org/">suckless.org</a>,推荐使用官网的原始版本从新构建你的个性dwm。
 
 我所使用的组合:
-> dwm
+> 窗口管理器:[dwm](http://dwm.suckless.org/)
 
-> 启动器:<a href="http://tools.suckless.org/dmenu/">dmenu</a>
+> 启动器:[dmenu](http://tools.suckless.org/dmenu/)
 
-> 虚拟终端:<a href="http://st.suckless.org/">st</a>
+> 虚拟终端:[st](http://st.suckless.org/)
 
 ### 要求
 
-构建 dwm 前, 你需要有 `Xlib` 头文件 In order to build dwm you need the Xlib header files.(此README参考来自：<a href="">theniceboy</a>,如果你感兴趣可参考他的dwm构建项目)
+构建 dwm 前, 你需要有 `Xlib` 头文件 In order to build dwm you need the Xlib header files.(此README参考来自：[theniceboy](https://github.com/theniceboy/dwm),如果你感兴趣可参考他的dwm构建项目)
 
 ------
 ### 安装
@@ -32,7 +32,7 @@ dwm的官网:<a href="http://suckless.org/">suckless.org</a>,推荐使用官网�
 
 > [dwm-scratchpad-6.2.diff](http://dwm.suckless.org/patches/scratchpad/)
 
-> [dwm_vanitygaps_myzip.diff](http://dwm.suckless.org/patches/vanitygaps/)(这个补丁我删除了很多功能，如需完成功能请点击链接到官网自行下载)
+> [dwm_vanitygaps_myzip.diff](http://dwm.suckless.org/patches/vanitygaps/)(这个补丁我删除了很多功能，如需完整功能请点击链接到官网自行下载)
 
 
 --------------
