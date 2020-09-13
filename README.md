@@ -77,3 +77,51 @@ exec dwm
 
 0 */1 * * * ~/software/dwm/script/dwm_status_cron.sh &>> ~/software/dwm/script/dwm_status.log
 ```
+-----
+### 目录&文件介绍
++ `dwm/`
+	* `img/`		#背景图片存放目录
+	* `script/`	#脚本存放目录
+		* `dwm_bg_cron.sh`	#crontab调用文件，更改壁纸
+		* `dwm_bg_fifo.sh`	#dwm启动时内部调用，配合crontab
+		* `reBg.sh`	#启动dwm初始的壁纸或快捷键调用
+		* `Bg`	<font color='red'>#需要自行创建的管道文件</font>
+		* `dwm_status_cron.sh` #crontab调用文件，设置状态栏
+		* `dwm_status_fifo.sh` #dwm启动时内部调用，配合crontab
+		* `dwm_status_manual.sh`	#手动组合键刷新状态栏快捷键调用
+		* `dwm_status.sh`	#启动dwm时初始的状态栏
+		* `status` <font color='red'>#需要自行创建的管道文件</font>
+		* `vol-down.sh`	#快捷键调用，音量减
+		* `vol-up.sh`	#快捷键调用，音量加
+		* `vol-toggle.sh`	#快捷键调用开关声音
+		* `dwm_status.log`	#执行脚本后会产生的log，如果不需要请查看`脚本`和`crontab`删除
+	* `patches/`	#此项目补丁文件
+
+其他一般均为官方文件，但请注意`config.def.h`,`config.h`,`dwm.c`等需要自己添写的文件
+
+<font color='red'>值得注意的是:</font>`config.def.h`仅仅是用来冗余修改的文件，如果想让修改起到作用可以使用`cp config.def.h config.h`，或者其他的你认为可行的方法;
+
+-----
+### 常用组合键功能
+自定义：
+
+| 组合键 | 功能 |
+| :----- | ---: |
+| `MODKEY + Alt + f1` | 下一张壁纸 |
+| `MODKEY + Alt + f11` | 音量减 |
+| `MODKEY + Alt + f12` | 音量加 |
+| `MODKEY + Alt + f10` | 声音开关 |
+| `MODKEY + f5` | 刷新状态栏 |
+| `MODKEY + Shift + f5` | 刷新状态栏，先显示时间 |
+
+
+默认
+| 组合键 | 功能 |
+| :--- | ---: |
+| `MODKEY + p` | 启动器 |
+| `MODKEY + Shift + c` | 关闭活动窗口 |
+| `MODKEY + Shift + q` | 退出dwm | 
+| `MODKEY + 数字键` | 跳到某个工作区 |
+| `MOKKEY + Shift + Enter` | terminal | 
+
+----
