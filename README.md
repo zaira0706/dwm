@@ -8,7 +8,7 @@ dwm的官网:<a href="http://suckless.org/">suckless.org</a>,推荐使用官网�
 
 > 启动器:[dmenu](http://tools.suckless.org/dmenu/)
 
-> 虚拟终端:[st](http://st.suckless.org/)
+> 虚拟终端:[st](http://st.suckless.org/)([我的st构建](https://github.com/zaira0706/st))
 
 ### 要求
 
