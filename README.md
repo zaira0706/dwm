@@ -10,9 +10,18 @@ dwm的官网:<a href="http://suckless.org/">suckless.org</a>,推荐使用官网�
 
 > 虚拟终端:[st](http://st.suckless.org/)([我的st构建](https://github.com/zaira0706/st))
 
+-----
+
 ### 要求
 
 构建 dwm 前, 你需要有 `Xlib` 头文件 In order to build dwm you need the Xlib header files.(此README参考来自：[theniceboy](https://github.com/theniceboy/dwm),如果你感兴趣可参考他的dwm构建项目)
+
+
+你可能还需要一些库或者第三方工具来完善dwm:(以下是本项目必要的，大部分也是dwm必要的)[apt安装为例]
+
+必要的:`apt install libx11-dev libxft-dev libxinerama-dev xinit`
+
+工具:`apt install alsa-utils compton acpi`
 
 ------
 ### 安装
@@ -122,6 +131,12 @@ exec dwm
 | `MODKEY + Shift + c` | 关闭活动窗口 |
 | `MODKEY + Shift + q` | 退出dwm | 
 | `MODKEY + 数字键` | 跳到某个工作区 |
-| `MOKKEY + Shift + Enter` | terminal | 
+| `MODKEY + Shift + Enter` | terminal | 
+| `MODKEY + j` | 跳到下一个窗口 |
+| `MODKEY + k` | 跳到上一个窗口 |
+| `MODKEY + h` | 向左扩大当前窗口宽度 |
+| `MODKEY + l` | 向右扩大当前窗口宽度 |
+
+<font color = 'red'>注意：</font>dwm的窗口是使用栈的结构来生成和关闭的.
 
 ----
