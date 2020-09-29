@@ -2253,10 +2253,10 @@ void
 MyBg(void)
 {
 	system("/usr/bin/feh --randomize --bg-fill ~/software/dwm/img;");
-	system("bash /home/hu/software/dwm/script/dwm_status.sh &");
+	system("bash ~/software/dwm/script/dwm_status.sh &");
 	system("compton -b");
-	system("bash /home/hu/software/dwm/script/dwm_status_fifo.sh &");
-	system("bash /home/hu/software/dwm/script/dwm_bg_fifo.sh &");
+	system("bash ~/software/dwm/script/dwm_status_fifo.sh &");
+	system("bash ~/software/dwm/script/dwm_bg_fifo.sh &");
 }
 
 int

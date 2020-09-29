@@ -67,16 +67,16 @@ static const char scratchpadname[] = "MainSt";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "90x24", NULL };
 
 //vol ; alsa
-static const char *volUp[] = { "/home/hu/software/dwm/script/vol-up.sh", NULL};
-static const char *volDown[] = { "/home/hu/software/dwm/script/vol-down.sh", NULL};
-static const char *volMute[] = { "/home/hu/software/dwm/script/vol-toggle.sh", NULL};
+static const char *volUp[] = { "/home/helliot/software/dwm/script/vol-up.sh", NULL};
+static const char *volDown[] = { "/home/helliot/software/dwm/script/vol-down.sh", NULL};
+static const char *volMute[] = { "/home/helliot/software/dwm/script/vol-toggle.sh", NULL};
 
 //dwm_status
-static const char *dwmStatusMan[] = { "/home/hu/software/dwm/script/dwm_status_manual.sh", NULL};
-static const char *dwmStatus[] = { "/home/hu/software/dwm/script/dwm_status.sh", NULL};
+static const char *dwmStatusMan[] = { "/home/helliot/software/dwm/script/dwm_status_manual.sh", NULL};
+static const char *dwmStatus[] = { "/home/helliot/software/dwm/script/dwm_status.sh", NULL};
 
 //reset blackground
-static const char *dwmBg[] = { "/home/hu/software/dwm/script/reBg.sh", NULL};
+static const char *dwmBg[] = { "/home/helliot/software/dwm/script/reBg.sh", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
