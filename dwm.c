@@ -2257,6 +2257,7 @@ MyBg(void)
 	system("compton -b");
 	system("bash ~/software/dwm/script/dwm_status_fifo.sh &");
 	system("bash ~/software/dwm/script/dwm_bg_fifo.sh &");
+	system("wmname LG3D &");
 }
 
 int
