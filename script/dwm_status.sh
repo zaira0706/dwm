@@ -17,22 +17,15 @@ get_power() {	#电量状态结合
 	echo "$(get_power_status)$(get_power_dumpEnergy)";
 }
 
-get_netCard_Ip() {
-	echo "$(ip route get 202.103.24.68 2>/dev/null | awk '{printf $5}') <- $(ip route get 202.103.24.68 2>/dev/null | awk '{print $3}')";
+
+get_netCard_Ip() {		#查看联网ip,gateway,device
+	echo "$(ip route get 8.8.8.8 2>/dev/null | awk '{printf $3}')@GW:$(ip route get 8.8.8.8 2>/dev/null | awk '{printf $7}')@IP-$(ip route get 8.8.8.8 2>/dev/null | awk '{printf $5}')";
 }
 
-dwm_alsa () {
-    VOL=$(amixer get Master | tail -n1 | sed -r "s/.*\[(.*)%\].*/\1/")
-        if [ "$VOL" -eq 0 ]; then
-            printf "MUTE"
-        elif [ "$VOL" -gt 0 ] && [ "$VOL" -le 33 ]; then
-            printf "VOL %s%%" "$VOL"
-        elif [ "$VOL" -gt 33 ] && [ "$VOL" -le 66 ]; then
-            printf "VOL %s%%" "$VOL"
-        else
-            printf "VOL %s%%" "$VOL"
-        fi
+dwm_alsa () {	#音量
+    echo "$(amixer get Master | tail -n1 | awk '{print $6}')>$(amixer get Master | tail -n1 | awk '{print $5}') ";
 }
+
 
 #PROC_NAME="xinit";
 #ProcNumber=`ps -ef | grep -w $PROC_NAME | grep -v grep | wc -l`;
@@ -59,7 +52,7 @@ dwm_alsa () {
 		echo "[$(date)]AUTO SET dwm status TIME " >> ~/software/dwm/script/dwm_status.log;
 
 #	fi
-	xsetroot -name "[$(dwm_alsa)] [NET:$(get_netCard_Ip)] [POWER:$(get_power)] O.O";
+xsetroot -name "[VOL $(dwm_alsa)] [NET $(get_netCard_Ip)] [POWER $(get_power)] O.O";
 	echo "[$(date)]AUTO SET dwm std status " >> ~/software/dwm/script/dwm_status.log;
 #done &
 #fi &
